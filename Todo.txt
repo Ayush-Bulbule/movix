@@ -1,0 +1,7 @@
+
+
+
+
+//Setting up Redux
+Step 1: Create  `store` folder in src
+Step 2: Create src/store/store.js - Past quick start from redux site
