@@ -4,6 +4,9 @@ import { useSelector } from 'react-redux'
 
 import './style.scss'
 import useFetch from '../../../hooks/useFetch'
+import Img from '../../../components/lasyLoadImage/img'
+import ContentWrapper from '../../../components/contentWrapper/ContentWrapper'
+
 
 const HeroBanner = () => {
 
@@ -27,7 +30,11 @@ const HeroBanner = () => {
     }
     return (
         <div className="heroBanner">
-            <div className="wrapper">
+            {!loading && <div className="backdrop-img">
+                <Img src={background} />
+            </div>}
+            <div className="opacity-layer"></div>
+            <ContentWrapper>
                 <div className="heroBannerContent">
                     <span className="title">Welcome</span>
                     <span className="subTitle">Millions of Movies, TV shows and people to discover.
@@ -39,7 +46,7 @@ const HeroBanner = () => {
                         <button>Search</button>
                     </div>
                 </div>
-            </div>
+            </ContentWrapper >
         </div>
     )
 }
