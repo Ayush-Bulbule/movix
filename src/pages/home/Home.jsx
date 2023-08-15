@@ -1,11 +1,17 @@
 import React from 'react'
 import HeroBanner from './heroBanner/HeroBanner'
+import Trending from './trending/Trending'
+import Popular from './popular/Popular'
+import TopRated from './topRated/TopRated'
 
 const Home = () => {
     return (
         <>
             <HeroBanner />
-            <div className="" style={{ "height": "1000000px" }}></div>
+            <Trending />
+            <Popular />
+            <TopRated />
+            <div className="" style={{ "height": "1000px" }}></div>
 
         </>
     )
