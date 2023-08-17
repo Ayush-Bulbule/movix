@@ -13,19 +13,18 @@ const Recommendation = ({ mediaType, id }) => {
         console.log(data);
     }
 
-    {
-        return
-        (data?.results?.length) > 0 ? (
-            <Carousel
-                title="Recommendations"
-                data={data?.results}
-                loading={loading}
-                endpoint={mediaType}
-            />
-        ) : (
-            <div className="noData"></div>
-        )
-    }
+    return ((
+        data?.results?.length) > 0 ? (
+        <Carousel
+            title="Recommendations"
+            data={data?.results}
+            loading={loading}
+            endpoint={mediaType}
+        />
+    ) : (
+        <div className="noData"></div>
+    ))
+
 };
 
 export default Recommendation;
